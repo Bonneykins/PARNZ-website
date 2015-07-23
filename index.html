@@ -1,0 +1,140 @@
+---
+layout: default
+title: Photo Art Rental New Zealand
+---
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Curated photo artwork for</div>
+                <div class="intro-heading">Receptions and meeting spaces</div>
+                <a href="#what-we-do" class="page-scroll btn btn-xl"
+                onclick="dataLayer.push({
+                  'event': 'button-click',
+                  'button-clicked': 'header-call-to-action'
+              });">Tell Me More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- what-we-do Section -->
+    <section id="what-we-do">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">What We Do</h2>
+                    <h3 class="section-subheading text-muted">Photo art for office spaces.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+              {% assign sections = site.what-we-do | sort: 'display-order' %}
+              {% for section in sections %}
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-{{ section.section-icon }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="what-we-do-section-heading">{{ section.section-title }}</h4>
+                    <p class="text-muted">{{ section.content }}</p>
+                </div>
+              {% endfor %}
+              <!--Sam, if you reduce this section from 3 sections to two, then you should write an if/else loop above that incorporates this for the 3 loop solution and outputs a 6 grid wide solution for the 2 loop. SB 10/7 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>Our firm is built around the needs of our clients and delivering a first rate service. We always offer a personal service and pride ourselves on the lasting relationships we have with our clients.</p>
+                  <p>We offer a range of services to help you understand, manage and improve your financial situation. </p>
+                  <p>On our website, we have a library of business resources covering all aspects of running a business. The resources include information on planning, finance, marketing and management.</p>
+                  <p>We would love to talk about how we could help your financial performance. Please contact us for a free consultation.</p>
+                  <p>We provide advice and support to individuals and businesses.</p>
+                  <p>Whether you are an ambitious entrepreneur with a growing business, an owner of a mature company, or planning your retirement, you need an adviser who can help you achieve your goals. We gain a deep understanding of you and your aspirations and work in partnership with you to help achieve those aspirations.</p>
+
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+              {% assign team = site.team | sort: 'display-order' %}
+              {% for member in team %}
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="{{ member.team-member-image-path }}" class="img-responsive img-circle" alt="{{ member.team-member-first-name }} {{ member.team-member-last-name }}">
+                        <h4>{{ member.team-member-first-name }} {{ member.team-member-last-name }}</h4>
+                        <p class="text-muted">{{ member.team-member-job-title }}</p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-6 col-md-push-6 contact-text">
+                        <h3>Photo Art Rental New Zealand Ltd</h3>
+                        <h4>P: +64 7 788 4077</h4>
+                        <h4>E: info@photoartrental.co.nz</h4>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6">
+                        <form class="form" id="contactForm" action="//formspree.io/bonneysamuel@gmail.com" method="post">
+                          <div class="form-group">
+                            <input class="form-control" type="text" name="Name" placeholder="Your name">
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control" type="email" name="Email" placeholder="Email">
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control" type="tel" name="Phone" placeholder="Phone">
+                          </div>
+                            <div class="form-group">
+                              <textarea class="form-control" name="Message" placeholder="Message"></textarea>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="text-center">
+                          <!-- CONFIG -->
+                          <input style="display:none" type="text" name="_gotcha">
+                          <input style="display:none" name="_next" value="/thanks.html" />
+                          <!-- /CONFIG -->
+                          <input class="btn btn-xl" type="submit" value="Send"
+                          onclick="dataLayer.push({
+                            'event': 'button-click',
+                            'button-clicked': 'contact-form-submit'
+                        });">
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

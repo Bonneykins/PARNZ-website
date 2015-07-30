@@ -179,6 +179,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
     font-family: "Cambria","Helvetica Neue",Helvetica,Arial,cursive;
     color: #fff;
+    margin-left: -15px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -876,4 +877,8 @@ body {
 
 .modal-body-text-left {
   text-align: left;
+}
+
+.nav-logo {
+  padding: 5px;
 }
